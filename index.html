@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhereNext</title>
+   
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-paw"></i>WhereNext</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#gallery">gallery</a>
+            <a href="#places">Places</a>
+            <a href="#map">Map</a>
+            <a href="#feedback">feedback</a>
+            <a href="#contact">Contact</a>
+          
+            
+            
+        </nav>
+
+        <div class="icons">
+            <div id="login-btn" class="fas fa-user"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+
+     
+
+    <form action="" class="login-form">
+
+        <h3>Login form</h3>
+        
+        <input type="email" placeholder="Enter your email" class="box">
+        <input type="password" placeholder="Enter your password" class="box">
+        <div class="remember">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">Remember me</label>
+        </div>
+        <a href="#" class="btn">Login</a>
+
+    </form>
+
+    </header>
+
+
+
+    <!-- home -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <div class="blur">
+             <h3 >so, where are you planning to go next?</h3>
+             </div>
+            <a href="login and signup/login.html" class="btn">Start the journey</a>
+           <a href="login and signup/SIGNUP.HTML"></a>
+           <br>
+
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <h1 style="font-size: 250%;">Welcome to WhereNext - Your Premier Travel Partner!</h1>
+        <br>
+
+            <p style="font-size: 190%; text-transform: none;">At WhereNext, we believe that every journey is an opportunity for adventure, discovery, and unforgettable memories. As a leading provider of tours and travel experiences, we are dedicated to crafting immersive journeys that exceed your expectations and ignite your wanderlust.</p>
+            <br>
+            <p style="font-size: 190%; text-transform: none;"><b>Who We Are:</b></p>
+            <p style="font-size: 190%; text-transform: none;">WhereNext is a team of passionate travel enthusiasts committed to curating exceptional travel experiences tailored to your interests, preferences, and budget. With years of industry expertise and a deep understanding of the destinations we serve, we take pride in delivering personalized service and unparalleled attention to detail.</p>
+            <br>
+            <p><ul style="font-size: 190%; text-transform: none;"><b>What We Offer:</b>
+                <li><b>Customized Tours:</b> Whether you're seeking a cultural immersion, an adrenaline-fueled adventure, or a relaxing getaway, our expertly crafted tours cater to every traveler's desires.</li><br>
+                <li><b>Expert Guidance:</b> From the moment you inquire about a trip to the time you return home, our team of travel specialists is dedicated to providing knowledgeable guidance and personalized assistance every step of the way.</li><br>
+                <li><b>Authentic Experiences:</b> We prioritize authenticity, offering unique opportunities to connect with local communities, savor authentic cuisine, and engage in sustainable tourism practices that respect and preserve the environments we explore.</li><br>
+                <li><b>Unrivaled Flexibility:</b> With flexible booking options, customizable itineraries, and 24/7 support, we empower you to travel with confidence, knowing that we are here to accommodate your needs and preferences.</li></ul></p>
+    </section>
+
+   
+
+    <!-- gallery -->
+
+    <section class="gallery" id="gallery">
+
+        <h2 class="heading">Gallery</h2>
+
+        <div class="slideshow-container">
+
+            
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="images/beach.jpeg" style="width:100%">
+                <div class="text"><b>Beaches</b></div>
+              </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="images/land.jpeg" style="width:100%">
+              <div class="text"><b>Landscapes</b></div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="images/mountain.jpeg" style="width:100%">
+              <div class="text"><b>Mountains</b></div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 4</div>
+              <img src="images/egypt.jpeg" style="width:100%">
+              <div class="text"><b>Famous places</b></div>
+            </div>
+
+            
+          
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+    </section>
+
+<script>
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+         
+         
+
+   
+
+    <section class="footer">
+
+        <div class="box-container">
+
+         
+           
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <input type="email" placeholder="Your Email" class="email">
+                <a href="#" class="btn">subscribe</a>
+            </div>
+
+        </div>
+
+        <div class="credit">&copy; 2024 tours&travel. All rights reserved by <a href="#" class="link">WhereNext</a></div>
+
+    </section>
+
+
+
+</body>
+</html>
